@@ -1,0 +1,15 @@
+#!/bin/rc
+
+flag e +
+
+switch($1){
+case -s
+	while(){
+		/bin/getty /dev/tty1 linux && login
+	} &
+case -k
+	exit 0
+case *
+	printf 'Usage: -s|-k\n'
+	exit 1
+}

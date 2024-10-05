@@ -1,0 +1,5 @@
+#!/bin/rc
+
+ip link set wlan0 up &
+
+wait

@@ -1,0 +1,14 @@
+#!/bin/rc
+
+flag e +
+
+switch($1) {
+case -s
+	exec sdhcp wlan0
+case -k
+	PID=`{pidof sdhcp}
+	exec kill -9 $PID
+case *
+	printf 'Usage: -s|-k\n'
+	exit 1
+}
