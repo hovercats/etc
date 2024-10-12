@@ -14,6 +14,7 @@ export KISS_PATH=/src/oakiss/repo
 export CFLAGS="-I/usr/include"
 export CXXFLAGS="-I/usr/include"
 export LDFLAGS="-L/usr/lib"
+export LD_LIBRARY_PATH=/usr/lib
 
 if [ -n "$SSH_CONNECTION" ] ; then
 	PS1=$(hostname)$PS1
